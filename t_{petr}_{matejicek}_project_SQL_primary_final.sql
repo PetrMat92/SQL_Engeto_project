@@ -3,8 +3,9 @@
 -- 2) It includes a UNION operation to combine the results and calculates the average price per unit. 
 -- 3) The query uses CTEs (Common Table Expressions) to organize the logic into  separate sections for easier readability.
 
-WITH price_section AS (
-			SELECT
+CREATE TABLE IF NOT EXISTS t_petr_matejicek_project_SQL_primary_final AS (
+	WITH price_section AS (
+		SELECT
  			YEAR(cp.date_from) AS year, 
  			cpc.name AS name,
  			AVG(cp.value) AS avg_price_value,
@@ -34,26 +35,26 @@ WITH price_section AS (
 		GROUP BY cp.payroll_year, cpib.name
 		ORDER  BY cp.payroll_year , cpib.name 
 		)
-	SELECT
-		ps.year,
-		ps.name,
-		ps.data_type,
-		ROUND(AVG(ps.average_value)) AS	average_value,
-		ps.unit
-	FROM payroll_section ps
-	WHERE ps.year BETWEEN
-    (SELECT MIN(year) FROM price_section) AND
-    (SELECT MAX(year) FROM price_section)
-	GROUP BY ps.year,ps.name
-	UNION ALL 
-	SELECT 
-		prs.year  ,
-		prs.name,
-		"Průměrná cena za jednotku" AS data_type,
-		ROUND(prs.avg_price_value,2) AS average_value,
+		SELECT
+			ps.year,
+			ps.name,
+			ps.data_type,
+			ROUND(AVG(ps.average_value),2) AS	average_value,
+			ps.unit
+		FROM payroll_section ps
+		WHERE ps.year BETWEEN
+    		(SELECT MIN(year) FROM price_section) AND
+    		(SELECT MAX(year) FROM price_section)
+		GROUP BY ps.year,ps.name
+		UNION ALL 
+		SELECT 
+			prs.year  ,
+			prs.name,
+			'Průměrná cena za jednotku' AS data_type,
+			ROUND(prs.avg_price_value,2) AS average_value,
 		prs.unit 
-	FROM price_section prs
-	GROUP BY prs.year, prs.name;
+		FROM price_section prs
+		GROUP BY prs.year, prs.name);
 
 
 
