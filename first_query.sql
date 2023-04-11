@@ -1,28 +1,36 @@
 -- Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 WITH avg_sal_trend AS (
-  SELECT cp.payroll_year AS year,
-         cpib.code, 
-         cpib.name AS industry_branch, 
-         AVG(cp.value) AS avg_salary,
-         AVG(cp.value) > (
-            SELECT AVG(cp2.value)
-            FROM czechia_payroll cp2
-            WHERE cp2.payroll_year = cp.payroll_year - 1
-            AND cp2.industry_branch_code = cp.industry_branch_code
-            AND cp2.value_type_code = 5958
-            GROUP BY cp2.industry_branch_code
-         ) AS salary_trend
-  FROM czechia_payroll cp
-  JOIN czechia_payroll_industry_branch cpib ON cp.industry_branch_code = cpib.code
-  WHERE cp.value_type_code = 5958
-  GROUP BY cp.payroll_year, cpib.code, cpib.name
+  SELECT 
+    tpm.`year` AS year,
+    tpm.name AS industry_branch,
+    tpm.data_type, 
+    AVG(tpm.average_value) AS avg_salary,
+    AVG(tpm.average_value) > (
+      SELECT AVG(tpm2.average_value)
+      FROM t_petr_matejicek_project_SQL_primary_final tpm2
+      WHERE tpm2.`year` = tpm.`year` - 1
+      AND tpm2.name = tpm.name
+      AND tpm2.data_type = 'Průměrná hrubá mzda na zaměstnance' 
+      GROUP BY tpm2.name 
+    ) AS salary_trend,
+    LAG(tpm.average_value) OVER (PARTITION BY tpm.name ORDER BY tpm.`year`) AS avg_previous_year,
+	 tpm.average_value / LAG(tpm.average_value) OVER (PARTITION BY tpm.name ORDER BY tpm.`year`) AS average_growth
+  FROM t_petr_matejicek_project_SQL_primary_final tpm
+  GROUP BY tpm.`year`, tpm.name, tpm.data_type
 )
-SELECT year, industry_branch, avg_salary, 
-	CASE WHEN salary_trend 
-	 	THEN 'Rising' 
-	 	ELSE 'Not Rising' 
-	END AS salary_trend
+SELECT 
+  year, 
+  industry_branch,
+  data_type,
+  avg_salary, 
+  CASE 
+    WHEN salary_trend THEN 'Rising'
+    ELSE 'Declining'
+  END AS salary_trend,
+  ROUND((avg_sal_trend.average_growth - 1) * 100, 2) AS growth_rate
 FROM avg_sal_trend
-HAVING salary_trend = 'Not Rising' AND year != 2000
-ORDER BY year;
+WHERE data_type = 'Průměrná hrubá mzda na zaměstnance'
+  AND salary_trend = FALSE 
+ORDER BY year, industry_branch;
+
