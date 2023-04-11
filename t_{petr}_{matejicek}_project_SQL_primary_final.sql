@@ -32,7 +32,7 @@ payroll_section AS (
     WHERE  cp.value_type_code = 5958 
         AND cp.calculation_code = 100
         AND cp.industry_branch_code IS NOT NULL 
-        AND cp.payroll_year BETWEEN 2000 AND 2021 -- Update the WHERE clause here
+        AND cp.payroll_year BETWEEN 2000 AND 2021
     GROUP BY cp.payroll_year, cpib.name
     ORDER BY cp.payroll_year, cpib.name 
 )
