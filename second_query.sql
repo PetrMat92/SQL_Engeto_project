@@ -40,6 +40,6 @@ SELECT
 	ps.food_product,
 	CONCAT(FORMAT(ps.average_value, 2), ' czk per ', ps.unit) AS mean_price_per_unit,
 	CONCAT(FORMAT(ss.avg_payroll, 0), ' czk') AS average_salary,
-	CONCAT(FORMAT(ss.avg_payroll / ps.average_value, 0), ' ', ps.unit) AS units_for_avg_payroll
+	CONCAT(FORMAT(ss.avg_payroll / ps.average_value, 0), ' ', ps.unit) AS units_for_avg_salary
 FROM price_section ps
 JOIN salary_section ss ON ps.year = ss.year;
