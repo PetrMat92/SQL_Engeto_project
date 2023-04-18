@@ -2,7 +2,9 @@ CREATE TABLE IF NOT EXISTS t_petr_matejicek_project_SQL_secondary_final AS (
 	SELECT
 		c.country,
 		e.`year`, 
-		e.GDP 
+		e.GDP
+		e.gini
+		e.taxes
 	FROM countries c 
 	JOIN economies e 
 		ON c.country = e.country
