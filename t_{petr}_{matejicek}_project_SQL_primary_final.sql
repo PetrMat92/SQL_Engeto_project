@@ -30,8 +30,6 @@ payroll_section AS (
     JOIN czechia_payroll_value_type cvt 
         ON cp.value_type_code = cvt.code
     WHERE  cp.value_type_code = 5958 
-        AND cp.calculation_code = 100
-        AND cp.industry_branch_code IS NOT NULL
     GROUP BY cp.payroll_year, cpib.name
     ORDER BY cp.payroll_year, cpib.name 
 )
