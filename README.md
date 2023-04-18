@@ -2,7 +2,7 @@
 
 # Introduction
 
-You work in the analytical department of an independent organization that focuses on the standard of living of citizens. You and your colleagues have agreed to answer specific research questions about the accessibility of basic food items for the general public. Your colleagues have already defined these questions and will provide the information to the press department, which will present the results at an upcoming conference on this topic.
+You work in the analytical department of an independent organization that focuses on the standard of living of citizens. You and your colleagues have agreed to answer specific research questions about the accessibility of basic food items for the general public. Your colleagues have already formulated these questions and will pass on the information to the press department, which will present the results at a conference on this topic in the near future.
 
 # First research question 
 
