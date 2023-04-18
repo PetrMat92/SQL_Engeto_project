@@ -10,6 +10,11 @@ You work in the analytical department of an independent organization that focuse
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors for the period from 2000 to 2021.
 
+On the basis of the data in the table, wage growth has not been uniform across all industries over the years. There has been a decline in wages in some sectors. For example, in 2009, the average gross wage per employee declined in mining and quarrying, accommodation and food services, wholesale and retail trade, and agriculture, forestry and fishing. In 2013, the average gross salary per employee declined in most industries including Cultural, Entertainment and Recreational Activities, Financial and Insurance Activities, Professional, Scientific and Technical Activities, and Electricity, Gas, Steam, Air Conditioning Supply etc.
+
+_These findings are consistent with the pattern of GDP growth in the Czech Republic, which experienced recessions in 2008, 2013, and 2020._
+
+
 | Year | Industry |	Average Gross Salary | Trend |	Change 
 | :---: | :---: | :---: | :---: | :---: |
 | 2013 | Banking and Insurance |	45233.5 CZK | Declining |	-9.0%
@@ -20,13 +25,9 @@ The dataset used in the research comes from the Open Data Portal of the Czech Re
 
 see 1.first_query.sql file in the repository
 
-On the basis of the data in the table, wage growth has not been uniform across all industries over the years. There has been a decline in wages in some sectors. For example, in 2009, the average gross wage per employee declined in mining and quarrying, accommodation and food services, wholesale and retail trade, and agriculture, forestry and fishing. In 2013, the average gross salary per employee declined in most industries including Cultural, Entertainment and Recreational Activities, Financial and Insurance Activities, Professional, Scientific and Technical Activities, and Electricity, Gas, Steam, Air Conditioning Supply etc.
-
-These findings are consistent with the pattern of GDP growth in the Czech Republic, which experienced recessions in 2008, 2013, and 2020.
-
 # Second research question
 
-**How many liters of milk and kilograms of bread is it possible to buy for the first and last comparable period in the available data on prices and wages?
+**Q: How many liters of milk and kilograms of bread is it possible to buy for the first and last comparable period in the available data on prices and wages?**
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 20018.
 
@@ -43,7 +44,7 @@ see 2.second_query.sql file in the repository
 
 # Third research question
 
-**Which food category exhibits the least inflationary pressure, indicated by the lowest year-on-year percentage increase in prices?
+**Q: Which food category exhibits the least inflationary pressure, indicated by the lowest year-on-year percentage increase in prices?**
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information about prices of selected food products  for the period from 2006 to 20018.
 
@@ -60,7 +61,7 @@ see 3.third_query.sql
 
 # Fourth research question 
 
-**Is there a year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%)?**
+**Q: Is there a year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%)?**
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 20018. 
 
@@ -75,11 +76,13 @@ There is no year in which the year-on-year increase in food prices was significa
 
 # Fifth research question 
 
-**Does the GDP level affect changes in wages and food prices? In other words, if the GDP increases significantly in one year, will it result in a more significant increase in food prices or wages in the same or following year?**
+**Q: Does the GDP level affect changes in wages and food prices? In other words, if the GDP increases significantly in one year, will it result in a more significant increase in food prices or wages in the same or following year?**
+
+The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors, information about prices of selected food products and data about countries in the world concerning their GDP, GINI, tax burden, etc. To accommodate the time constraint in the table in price development, the dataset must be restricted solely to the period from 2006 to 2018 and to only include data for the Czechia.
 
 Without further analysis, it is difficult to draw a definite conclusion about the relationship between changes in GDP, wages, and food prices based on the given dataset. The relationship between these variables is inconclusive and does not allow us to determine whether there is a significant impact of GDP on wages and food prices.
 
-| Year | GDP growth | Aggregate avg price growth |	Aggregate avg salary growth|
+| Year | GDP growth (CZE) | Aggregate avg price growth (CZE)|	Aggregate avg salary growth (CZE)|
 | :---: | :---: | :---: | :---: | 
 | 2007|	5.57|	9.26|	6.92|
 |2008|	2.69|	8.92|	7.41|
