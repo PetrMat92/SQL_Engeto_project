@@ -60,7 +60,7 @@ see 3.third_query.sql
 
 # Fourth research question 
 
-**Is there a year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%)?
+**Is there a year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%)?**
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 20018. 
 
@@ -75,7 +75,7 @@ There is no year in which the year-on-year increase in food prices was significa
 
 # Fifth research question 
 
-**Does the GDP level affect changes in wages and food prices? In other words, if the GDP increases significantly in one year, will it result in a more significant increase in food prices or wages in the same or following year?
+**Does the GDP level affect changes in wages and food prices? In other words, if the GDP increases significantly in one year, will it result in a more significant increase in food prices or wages in the same or following year?**
 
 Without further analysis, it is difficult to draw a definite conclusion about the relationship between changes in GDP, wages, and food prices based on the given dataset. The relationship between these variables is inconclusive and does not allow us to determine whether there is a significant impact of GDP on wages and food prices.
 
