@@ -18,10 +18,10 @@ _These findings are consistent with the pattern of GDP growth in the Czech Repub
 | Year | Industry |	Average Gross Salary | Trend |	Change 
 | :---: | :---: | :---: | :---: | :---: |
 | 2013 | Banking and Insurance |	45233.5 CZK | Declining |	-9.0%
-| 2009 | Mining and Quarrying |	27960.5 CZK |	Declining |	-4.36%
-| 2013 | Electricity and Gas |	40299.75 CZK |	Declining |	-4.29%
 | 2020 |	Real Estate Activities |	27611.75 CZK |	Declining |	-7.17%
 | 2020 |	Accommodation and Food Service |	18443.75 CZK |	Declining |	-6.87%
+| 2009 | Mining and Quarrying |	27960.5 CZK |	Declining |	-4.36%
+| 2013 | Electricity and Gas |	40299.75 CZK |	Declining |	-4.29%
 
 see 1.first_query.sql file in the repository
 
