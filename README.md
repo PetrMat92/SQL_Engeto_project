@@ -65,7 +65,7 @@ see 3.third_query.sql
 
 The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 20018. 
 
-There is no year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%) based on the following data:
+There is no year in which the year-on-year increase in food prices was significantly higher than the increase in wages (greater than 10%):
 
 | Year | Aggregate avg price growth |	Aggregate avg salary growth| Percentage difference
 | :---: | :---: | :---: | :---: | 
