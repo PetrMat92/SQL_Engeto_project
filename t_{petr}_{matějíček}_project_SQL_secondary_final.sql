@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS t_petr_matejicek_project_SQL_secondary_final AS (
         (SELECT MIN(`year`)  
         FROM t_petr_matejicek_project_SQL_primary_final
 	WHERE data_type = 'Průměrná cena za jednotku') 
-	    AND (SELECT MAX(`year`)
-		FROM t_petr_matejicek_project_SQL_primary_final
-		WHERE data_type = 'Průměrná cena za jednotku')
+	AND (SELECT MAX(`year`)
+	FROM t_petr_matejicek_project_SQL_primary_final
+	WHERE data_type = 'Průměrná cena za jednotku')
     ORDER BY c.country, e.`year`);
