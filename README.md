@@ -74,6 +74,8 @@ There is no year in which the year-on-year increase in food prices was significa
 | 2011 | 4.84 |	2.15 |	2.69 |
 | 2007 | 9.26 |	6.92 |	2.34 |	
 
+see 4.fourth_query.sql
+
 # Fifth research question 
 
 **Q: Does the GDP level affect changes in wages and food prices? In other words, if the GDP increases significantly in one year, will it result in a more significant increase in food prices or wages in the same or following year?**
