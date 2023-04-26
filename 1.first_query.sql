@@ -10,8 +10,8 @@ WITH avg_sal_trend AS (
       SELECT AVG(tpm2.average_value)
       FROM t_petr_matejicek_project_SQL_primary_final tpm2
       WHERE tpm2.`year` = tpm.`year` - 1
-      AND tpm2.name = tpm.name
-      AND tpm2.data_type = 'Průměrná hrubá mzda na zaměstnance' 
+      	AND tpm2.name = tpm.name
+      	AND tpm2.data_type = 'Průměrná hrubá mzda na zaměstnance' 
       GROUP BY tpm2.name 
     ) AS salary_trend,
     LAG(tpm.average_value) OVER (PARTITION BY tpm.name ORDER BY tpm.`year`) AS avg_previous_year,
