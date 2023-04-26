@@ -29,7 +29,7 @@ see 1.first_query.sql file in the repository
 
 **Q: How many liters of milk and kilograms of bread is it possible to buy for the first and last comparable period in the available data on prices and wages?**
 
-The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 20018.
+The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information on wages in various sectors and information about prices of selected food products for the period from 2006 to 2018.
 
 For the first comparable period in the available data (2006), it is possible to buy 1,409 liters of milk and 1,262 kilograms of bread with 20,342 CZK. For the last comparable period (2018), it is possible to buy 1,614 liters of milk and 1,319 kilograms of bread with 31,980 CZK.
 
