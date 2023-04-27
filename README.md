@@ -46,7 +46,7 @@ see 2.second_query.sql file in the repository
 
 **Q: Which food category exhibits the least inflationary pressure, indicated by the lowest year-on-year percentage increase in prices?**
 
-The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information about prices of selected food products  for the period from 2006 to 20018.
+The dataset used in the research comes from the Open Data Portal of the Czech Republic, which contains information about prices of selected food products  for the period from 2006 to 2018.
 
 The food category with the least inflationary pressure is  sugar with a decrease of -1.92%. The food category with the lowest year-on-year percentage increase in prices is banana with average annual increase of 0.81%.
 
